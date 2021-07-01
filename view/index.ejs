@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uSocial</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css">
+</head>
+<body>
+   
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/login">Ranking bancario</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" href="/login">Login</a>
+            <a class="nav-item nav-link" href="/registro">Registro</a>
+          </div>
+        </div>
+    </nav>
+
+
+    <div class="container"> 
+        <h1>hola mundo</h1>
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action">Tiempos de carga</a>
+        
+          <a href="#" class="list-group-item list-group-item-action list-group-item-primary">
+            <button id="diez" type="button" class="btn btn-primary" style="border-radius: 15px;" onclick="setDiez()">
+            10s
+          </button></a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-secondary"> 
+              <button id="veinte" type="button" class="btn btn-secondary" style="border-radius: 15px;" onclick="setVeinte()">20s</button>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-success">
+            <button id="treinta" type="button" class="btn btn-success" style="border-radius: 15px;" onclick="setTreinta()">30s</button>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-danger">
+            <button id="sesenta" type="button" class="btn btn-danger" style="border-radius: 15px;" onclick="setSesenta()">1min</button>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-warning">
+            <button id="sesenta2" type="button" class="btn btn-warning" style="border-radius: 15px;" onclick="setSesenta2()">2min</button>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-info">
+            <button id="sesenta5" type="button" class="btn btn-info" style="border-radius: 15px;" onclick="setSesenta5()">5min</button>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-light">
+            <button id="sesenta10" type="button" class="btn btn-light" style="border-radius: 15px;" onclick="setSesenta10()">10min</button>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action list-group-item-dark">
+            <button id="sesenta30" type="button" class="btn btn-dark" style="border-radius: 15px;" onclick="setSesenta30()">30min</button>
+          </a>
+        </div>
+    </div>
+
+
+    <script>
+        let tiempo = 2;
+        let timeout = setInterval(() => console.log(tiempo), tiempo *1000);
+        
+        function establecerIntervalo(){
+          timeout = setInterval(getSQL, tiempo * 1000);
+        }
+
+        function setDiez(){
+          clearInterval(timeout);
+          tiempo = 10;
+          establecerIntervalo();
+
+        }
+
+        function setVeinte(){
+          clearInterval(timeout);
+          tiempo = 20;
+          establecerIntervalo();
+          
+        }
+        function setTreinta(){
+          clearInterval(timeout);
+          tiempo = 30;
+          establecerIntervalo();
+        }
+        function setSesenta(){
+          clearInterval(timeout);
+          tiempo = 60;
+          establecerIntervalo();
+        }
+        function setSesenta2(){
+          clearInterval(timeout);
+          tiempo = 120;
+          establecerIntervalo();
+        }
+        function setSesenta5(){
+          clearInterval(timeout);
+          tiempo = 180;
+          establecerIntervalo();
+        }
+
+        function setSesenta10(){
+          clearInterval(timeout);
+          tiempo = 600;
+          establecerIntervalo();
+        }
+        function setSesenta30(){
+
+          clearInterval(timeout);
+          tiempo = 1800;
+          establecerIntervalo();
+
+        }
+
+      
+
+
+        window.onload = function(){
+          
+
+            
+
+         }
+    
+    </script>
+    
+</body>
+</html>
