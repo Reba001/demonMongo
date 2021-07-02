@@ -26,7 +26,7 @@ async function insert(documento){
  async function getQuery(){
      //varios episodios, generos y directores y temporada
      try{
-        await sql.connect('Server=34.69.214.50,1433;Database=NETFLIX;User Id=sa;Password=BranDoncito123;Encrypt=false')
+        await sql.connect('Server=35.239.71.33,1433;Database=NETFLIX;User Id=sa;Password=BranDoncito123;Encrypt=false')
         const result = await sql.query`
         SELECT t.id, 
                 tt.name as tipo_titulo, 
