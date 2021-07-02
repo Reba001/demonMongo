@@ -3,6 +3,7 @@ const engine = require('ejs-mate');
 const path = require('path');
 const bodyParser = require('body-parser');
 const app = express();
+require('./routes/dbnoSQL');
 
 app.set('views', path.join(__dirname, 'view'));
 app.engine('ejs', engine);
