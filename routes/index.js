@@ -60,7 +60,8 @@ async function insert(documento){
 
          console.log(result.recordset);
          result.recordset.forEach(element => {
-            let titulo = await Title.findOne({primaryTitle: element.titulo});
+            console.log(element.titulo);
+            const titulo = await Title.findOne({primaryTitle: element.titulo});
             console.log(titulo);
             if(!titulo){
                 let setTitulo = new Title();
